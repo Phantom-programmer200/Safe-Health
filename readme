@@ -1,0 +1,16 @@
+1 This project is based of html, css, javascript, vue.js, node js(express js and mongoDB )
+2
+To make this running you will need to install this:
+
+- express
+- bcrypt
+- passport
+- express-flash
+- express-session
+- method-override
+- mongodb
+- body parser
+
+you should also install the dependencies and other packages
+
+3 The project is deployed using 'nodemon server.js'

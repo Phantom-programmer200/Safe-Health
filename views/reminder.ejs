@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reminder</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5"></script>
+  </head>
+
+  <body>
+    <div id="app" class="container mt-5">
+      <h1>Reminder</h1>
+      <form @submit.prevent="addReminder" class="mb-3">
+        <div class="form-group">
+          <label for="reminder">Reminder:</label>
+          <input
+            type="text"
+            id="reminder"
+            v-model="newReminderText"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Reminder</button>
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Reminder</th>
+            <th>Date/Time</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(reminder, index) in reminders" :key="index">
+            <td>{{ reminder.text }}</td>
+            <td>{{ reminder.dateTime }}</td>
+            <td>
+              <button
+                @click="editReminder(index)"
+                class="btn btn-sm btn-primary"
+              >
+                Edit
+              </button>
+              <button
+                @click="removeReminder(index)"
+                class="btn btn-sm btn-danger"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="/scriptsheet/reminder.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+.card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 50px auto;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #6fb2e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .result {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  low-max {
+    color: #d63031;
+  }
+  
+  normal-max {
+    color: #00b894;
+  }
+  
+  high-max {
+    color: #0984e3;
+  }
+  

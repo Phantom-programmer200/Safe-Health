@@ -1,0 +1,70 @@
+body {
+    background-color: #f2f2f2;
+  
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    width: 200%;
+    max-width: 400px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  .logo {
+    width: 100px;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="username"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6fb2e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #5a9ccf;
+  }
+  
+  .error-message {
+    color: red;
+    background-color: #ffe6e6;
+    border: 1px solid #ff8080;
+    padding: 10px;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>One Rep Max Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet/ORMC.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="card">
+        <h2>One Rep Max Calculator</h2>
+        <div class="input-container">
+          <label for="weight">Weight Lifted (kg):</label>
+          <input type="number" v-model="weight" />
+        </div>
+        <div class="input-container">
+          <label for="reps">Number of Reps:</label>
+          <input type="number" v-model="reps" />
+        </div>
+        <button @click="calculateOneRepMax">Calculate</button>
+        <div class="result" v-if="oneRepMax !== null">
+          <p>Your estimated one rep max is: {{ oneRepMax }} kg</p>
+          <p>{{ oneRepMaxCondition }}</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scriptsheet/ORMC.js"></script>
+  </body>
+</html>

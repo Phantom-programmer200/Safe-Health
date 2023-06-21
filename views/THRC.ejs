@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Target Heart Rate Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet/THRC.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="card">
+        <h2>Target Heart Rate Calculator</h2>
+        <div class="input-container">
+          <label for="age">Age:</label>
+          <input type="number" v-model="age" />
+        </div>
+        <div class="input-container">
+          <label for="restingHeartRate">Resting Heart Rate:</label>
+          <input type="number" v-model="restingHeartRate" />
+        </div>
+        <button @click="calculateTargetHeartRate">Calculate</button>
+        <div class="result" v-if="targetHeartRate !== null">
+          <p>Your target heart rate is: {{ targetHeartRate }}</p>
+          <p>{{ targetHeartRateCondition }}</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scriptsheet/THRC.js"></script>
+  </body>
+</html>

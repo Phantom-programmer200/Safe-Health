@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet/bmi.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="card">
+        <h2>BMI Calculator</h2>
+        <div class="input-container">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" v-model="weight" />
+        </div>
+        <div class="input-container">
+          <label for="height">Height (cm):</label>
+          <input type="number" v-model="height" />
+        </div>
+        <button @click="calculateBMI">Calculate</button>
+        <div class="result" v-if="bmi !== null">
+          <p>Your BMI is: {{ bmi.toFixed(2) }}</p>
+          <p>{{ bmiCategory }}</p>
+        </div>
+      </div>
+    </div>
+    <script src="/scriptsheet/bmi.js"></script>
+  </body>
+</html>

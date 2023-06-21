@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weight Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Weight Tracker</h1>
+      <label for="weight">Weight:</label>
+      <input type="number" v-model="weight" id="weight" />
+      <button @click="addWeight">Add</button>
+      <canvas id="chart"></canvas>
+    </div>
+    <script src="/scriptsheet/chart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blood Alcohol Concentration Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet/BAC.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="card">
+        <h2>Blood Alcohol Concentration Calculator</h2>
+        <div class="input-container">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" v-model="weight" />
+        </div>
+        <div class="input-container">
+          <label for="gender">Gender:</label>
+          <select v-model="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="drinks">Number of Drinks:</label>
+          <input type="number" v-model="drinks" />
+        </div>
+        <div class="input-container">
+          <label for="hours">Time Passed since First Drink (hours):</label>
+          <input type="number" v-model="hours" />
+        </div>
+        <button @click="calculateBAC">Calculate</button>
+        <div class="result" v-if="BAC !== null">
+          <p>Your blood alcohol concentration (BAC) is: {{ BAC.toFixed(3) }}</p>
+          <p>{{ BACCondition }}</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scriptsheet/BAC.js"></script>
+  </body>
+</html>
