@@ -306,11 +306,15 @@ function checkAuthenticated(req, res, next) {
 }
 
 function checkNotAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return res.redirect("/");
+  if (!req.isAuthenticated()) {
+    // If the user is not authenticated, allow them to proceed to the next middleware
+    return next();
   }
-  next();
+
+  // If the user is authenticated, redirect them to the homepage or main page
+  res.redirect("/userprofile");
 }
+
 app.listen(4000, () => {
   console.log("server running on port : " + 4000);
 });
